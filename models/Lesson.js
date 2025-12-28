@@ -6,10 +6,10 @@ const lessonSchema = new mongoose.Schema({
   content: String,
   questions: [
     {
-      type: String,
-      prompt: String,
-      options: [String],
-      answer: String
+      questionType: { type: String },
+      prompt: { type: String },
+      options: [{ type: String }],
+      answer: { type: String }
     }
   ]
 });
